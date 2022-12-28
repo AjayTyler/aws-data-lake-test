@@ -2,7 +2,7 @@
 
 ## Overview
 
-The [`etl.py`](etl.py) script in this project reads from two sets of information (song data and event-based analytics for songplays from the Sparkify app) and derives a more analytics-friendly schema. It splits the two datasets into five tables.
+The [`etl.py`](etl.py) script in this project reads from two sets of information (song data and logs for songplays from the Sparkify app) and derives a more analytics-friendly schema. It splits the two datasets into five tables.
 
 **songplays:** songs played by individual users.
 
@@ -27,3 +27,9 @@ Aside from including any necessary information in [`dl.cfg`](dl.cfg), you will a
 Pay special attention to lines 176 and 177 to make sure that the nested .json filepath that you are working with is correct, and any necessary wildcards have been inclulded.
 
 Other than that, you should be able to invoke the script without any trouble, presuming that you are running it in an environment that has the proper access to your S3 objects and your Python environment has the libraries listed in the dependencies.
+
+## Files in this Repo
+
+- [`dl.cfg`](dl.cfg): config file where you can include your Amazon credentials.
+- [`etl.py`](etl.py): script that reads song and log data, and then writes the output to Parquet files.
+- `README.md`: the file you're reading right now.
